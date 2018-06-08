@@ -5,7 +5,6 @@ class TaskForm extends React.Component {
         super(props);
         this.state = {
             desc: "",
-            isComplete: false
         }
         this.inputUpdated = this.inputUpdated.bind(this);
         this.submitTask = this.submitTask.bind(this);
@@ -18,10 +17,10 @@ class TaskForm extends React.Component {
 
     submitTask (event) {
         event.preventDefault();
-        const { task } = this.state;
+        const { desc } = this.state;
         const { addTask } = this.props;
-        addTask(task);
-        this.setState( {task : ""} );
+        addTask(desc);
+        this.setState( {desc : ""} );
     }
 
     render() {
@@ -34,7 +33,7 @@ class TaskForm extends React.Component {
                     <div className="form-group col-md-10">
                         <input className="form-control"
                             type="input" name="task" 
-                            value={this.state.task}
+                            value={this.state.desc}
                             onInput={this.inputUpdated}
                         />
                     </div>

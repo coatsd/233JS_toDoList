@@ -9,7 +9,7 @@ class App extends Component {
     let tasks = JSON.parse(localStorage.getItem('TASKS'));
     if(!tasks) {
       tasks = [
-        {task: 'Test Task 1', isComplete: false},
+        {desc: 'Test Task 1', isComplete: false},
       ];
     }  
     this.state = { 
@@ -39,11 +39,11 @@ class App extends Component {
     });
   }
 
-  addTask(task) {
+  addTask(desc) {
     console.log("addTask");
     let tasks = JSON.parse(JSON.stringify(this.state.tasks));
     let newTask = {
-      task,
+      desc,
       isComplete: false,
     }; 
     tasks.push(newTask);
