@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 
 class TaskItem extends Component{
 
+    onDeleteClick(event){
+        event.preventDefault();
+        const deleteTask = this.props.deleteTask;
+        deleteTask(this.props.index);
+    }
+
+    onChange(event){
+        const onChange = this.props.toggleTaskStatus;
+        onChange(this.props.index);
+    }
+
     render() {
         const task = this.props.task;
         const onChange = this.onChange.bind(this);
@@ -20,7 +31,7 @@ class TaskItem extends Component{
                             </label>
                     </div>
                     <div className={taskClassName}>
-                        ${task.task}
+                        {task.task}
                     </div>
                     <div className="col-md-1 col-xs-1 col-lg-1 col-sm-1 delete-icon-area">
                         <a href="/" onClick={onDeleteClick}>

@@ -9,9 +9,7 @@ class App extends Component {
     let tasks = JSON.parse(localStorage.getItem('TASKS'));
     if(!tasks) {
       tasks = [
-        {task: 'Go to Dentist', isComplete: false},
-        {task: 'Do Gardening', isComplete: true},
-        {task: 'Renew Library Account', isComplete: false},
+        {task: 'Test Task 1', isComplete: false},
       ];
     }  
     this.state = { 
