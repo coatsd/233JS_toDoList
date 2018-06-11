@@ -35,7 +35,8 @@ class TaskItem extends Component{
                     </div>
                     <div className="col-md-1 col-xs-1 col-lg-1 col-sm-1 delete-icon-area">
                         <a href="/" onClick={onDeleteClick}>
-                        <i id="deleteTask" className="delete-icon glyphicon glyphicon-trash"></i></a>
+                            <i id="deleteTask" className="delete-icon glyphicon glyphicon-trash"></i>
+                        </a>
                     </div>
                 </div>
             </li>
