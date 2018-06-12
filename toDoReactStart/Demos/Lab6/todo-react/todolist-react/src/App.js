@@ -53,6 +53,8 @@ class App extends Component {
   }
 
   render() {
+    localStorage.setItem('TASKS', JSON.stringify(this.state.tasks));
+
     return (
       <div>
         <TaskForm addTask = {this.addTask} />
